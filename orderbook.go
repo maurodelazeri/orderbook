@@ -165,9 +165,9 @@ func (orderBook *OrderBook) ProcessOrderList(side string, orderList *OrderList, 
 			}
 		}
 
-		// if verbose {
-		// 	fmt.Println("TRADE: Time - %v, Price - %v, Quantity - %v, TradeID - %v, Matching TradeID - %v", orderBook.time, tradedPrice.String(), tradedQuantity.String(), counterParty, quote["trade_id"])
-		// }
+		if verbose {
+			//	fmt.Println("TRADE: Time - %v, Price - %v, Quantity - %v, TradeID - %v, Matching TradeID - %v", orderBook.time, tradedPrice.String(), tradedQuantity.String(), counterParty, quote["trade_id"])
+		}
 
 		transactionRecord := make(map[string]string)
 		transactionRecord["timestamp"] = strconv.Itoa(orderBook.time)
